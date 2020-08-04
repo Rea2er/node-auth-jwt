@@ -16,6 +16,9 @@ mongoose.connect(
 // Import Routes
 const authRoute = require("./routes/auth");
 
+// Middlewares
+app.use(express.json());
+
 // Route Middlewares
 app.use("/api/user", authRoute);
 
